@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-  inputData = "";
+  bColor = "";
 
   userName:string = "";
   userEmail:string = "";
@@ -24,7 +24,8 @@ export class RegistrationComponent implements OnInit {
 
     /***** Validating the Entered value *****/
     if(n == "" || email == "" || p =="" || cp == ""){
-      alert("Enter valid Input");
+      this.bColor="red";
+      
       return;
     }
     if(p != cp){

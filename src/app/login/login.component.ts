@@ -12,6 +12,9 @@ export class LoginComponent implements OnInit {
   emailID:any = "";
   passwordL:string = "";
 
+  bColorForEmail ="";
+  bColorForPass ="";
+
   constructor(private router: Router,private service:ServService) {   }
  
   ngOnInit(): void { }
@@ -20,10 +23,10 @@ export class LoginComponent implements OnInit {
 
     let details:string | null = localStorage.getItem(email); //retriving user information from the local storage
     if(details == null){
-      alert("No Such a user found");
+      this.bColorForEmail = 'red';
       return;
     }
-
+    this.bColorForEmail = "Green";
 
     interface MyObj {
       userName: string;
@@ -35,13 +38,13 @@ export class LoginComponent implements OnInit {
     console.log(obj.userName);
     console.log(obj.userEmail);
     console.log(obj.userPassword);
-    
+    //cmd
     this.passwordL = pass;
     if(obj.userPassword != pass){
-      alert("Wrong Password");
+      this.bColorForPass = "red";
       return;
     }
-    
+    this.bColorForPass = "Green";
     //storing user information into service for global usage
     this.service.userName = obj.userName;
     this.service.userEmail = obj.userEmail;

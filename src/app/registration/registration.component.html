@@ -14,7 +14,7 @@
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input type="text" id="form3Example1c" class="form-control" #name/>
+                        <input type="text" id="form3Example1c" class="form-control" #name [style.border-color]="bColor"/>
                         <label class="form-label" for="form3Example1c">Your Name</label>
                       </div>
                     </div>
@@ -61,11 +61,12 @@
       </div>
     </div>
   </section>
-  <div class="checkNgModel">
+  
+  <!-- <div class="checkNgModel">
     <select [(ngModel)]="inputData">
       <option value="Bharath">"Bharath"</option>
       <option value="Bharath1">"Bharath1"</option>
       <option value="Bharath12">"Bharath2"</option>
     </select> 
     <p>{{inputData}}</p>
-  </div>
+  </div> -->

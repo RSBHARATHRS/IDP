@@ -56,3 +56,7 @@
     text-decoration:none;
     color:#fff;
 }
+
+input{
+    border: 4px solid;
+}
